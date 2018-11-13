@@ -42,6 +42,7 @@ mwu_kermit <- kermit %>%
 # H1: there is...
 
 mwu_kermit
+
 ```
 
 There was no significant difference in ranks for male and female respondents (W = 155.5, p = 0.4, alpha = 0.05).
