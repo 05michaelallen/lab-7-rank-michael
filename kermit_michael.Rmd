@@ -46,3 +46,12 @@ mwu_kermit
 ```
 
 There was no significant difference in ranks for male and female respondents (W = 155.5, p = 0.4, alpha = 0.05).
+
+Do the ranks in the pre-column differ from the post-column? 
+```{r}
+#H0: There is not a significant difference in ranks for pre and post talk scores
+wsr_kermit <- wilcox.test(kermit$Score.pre, kermit$Score.post, paired = TRUE)
+wsr_kermit
+```
+
+There is no significant difference in ranks in pre- and post- talk Kermit scores (statistical summary here....)
