@@ -26,8 +26,22 @@ kermit <- read_csv("kermit.csv")
 hist_kermit <- 
   ggplot(kermit, aes(x = Score.pre)) +
   geom_histogram(bins = 4) +
-  facet_wrap(~Gender)
+  facet_wrap(~Gender) + 
+  theme_classic()
 
 hist_kermit
 ```
 
+Is there a significant difference in pre-talk ranks of kermit for male and female respondents
+
+```{r}
+mwu_kermit <- kermit %>%
+  wilcox.test(Score.pre ~ Gender, data = .)
+
+# H0: there is not a significant difference in ranks of male and female respondents
+# H1: there is...
+
+mwu_kermit
+```
+
+There was no significant difference in ranks for male and female respondents (W = 155.5, p = 0.4, alpha = 0.05).
